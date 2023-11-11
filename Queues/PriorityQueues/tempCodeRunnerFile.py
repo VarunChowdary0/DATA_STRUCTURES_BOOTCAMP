@@ -1,0 +1,1 @@
+heapq.heapify(Customers)
