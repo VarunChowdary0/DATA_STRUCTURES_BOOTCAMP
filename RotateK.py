@@ -101,6 +101,7 @@ class LinkedList:
         return length  
     
     def FindMedian(self):
+        pass
 
 LL = LinkedList()
 length = 0
