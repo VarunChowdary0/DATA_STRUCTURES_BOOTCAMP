@@ -7,13 +7,6 @@ class Node:
 class BinarySearchTree:
     def __init__(self):
         self.root = None
-    # def Insert(self,a,temp):
-    #     if temp == None:
-    #         return Node(a)
-    #     if a < temp.data:
-    #         temp.left = self.Insert(a,temp.left)
-    #     else:
-    #         temp.right = self.Insert(a,temp.right)
 
     def Insert(self,a):
         depth = 0
