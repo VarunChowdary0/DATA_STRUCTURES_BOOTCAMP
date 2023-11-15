@@ -39,7 +39,7 @@ def buildGraphWithList(edges,n):
 def hasPath(graph,src,des,visited):
     if src == des:
         return True
-    for edge in graph[src]:
+    for edge in graph[src-1]:
         if visited[edge[1]] == False:
             visited[edge[1]] = True
             flag = hasPath(graph,edge[1],des,visited)
