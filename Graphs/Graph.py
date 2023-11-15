@@ -40,8 +40,8 @@ def hasPath(graph,src,des,visited):
     if src == des:
         return True
     for edge in graph[src-1]:
-        if visited[edge[1]] == False:
-            visited[edge[1]] = True
+        if visited[edge[1]-1] == False:
+            visited[edge[1]-1] = True
             flag = hasPath(graph,edge[1],des,visited)
             if flag == True:
                 return True
@@ -105,8 +105,8 @@ for x in graph:
 
 # printListGraph(graphUsingList)
 # printMatrixGraph(graphUsingMatrix)
-# print(hasPath(graph,1,8,visited))
-# print(isGraphConnected(graph,n))
+print(hasPath(graph,1,5,visited))
+print(isGraphConnected(graph,n))
 
 # printAllPath(graph,1,8,"",[False for i in range(n+1)])
 

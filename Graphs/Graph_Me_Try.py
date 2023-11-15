@@ -11,7 +11,15 @@ def toGraph(edges,n):
     return graph
 
 def hasPath(graph,src,dest,visited):
-    pass
+    if src == dest :
+        return True
+    for edge in edges:
+        if visited[edge[1]-1] == False:
+            visited[edge[1]-1] = True
+            flag = hasPath(graph,edge[1],dest,visited)
+            if flag == True:
+                return True
+    return False
 
 edges = [
     [1,2,90],
@@ -32,3 +40,5 @@ graph = toGraph(edges,n)
 
 for x in graph:
     print(x)
+
+print(hasPath(graph,1,8,visited))
